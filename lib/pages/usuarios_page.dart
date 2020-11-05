@@ -71,9 +71,9 @@ class _UsuariosPageState extends State<UsuariosPage> {
   ListView _listViewUsuarios() {
     return ListView.separated(
         physics: BouncingScrollPhysics(),
-        itemBuilder: (_, i) => _usuarioListTile(usuarios[i]),
-        separatorBuilder: (_, i) => Divider(),
-        itemCount: usuarios.length - 2);
+        itemBuilder: (BuildContext context, i) => _usuarioListTile(usuarios[i]),
+        separatorBuilder: (BuildContext context, i) => Divider(),
+        itemCount: usuarios.length);
   }
 
   ListTile _usuarioListTile(Usuario usuario) {

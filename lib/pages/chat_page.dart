@@ -102,7 +102,7 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
                 child: ListView.builder(
               physics: BouncingScrollPhysics(),
               itemCount: _messages.length,
-              itemBuilder: (_, i) => _messages[i],
+              itemBuilder: (BuildContext context, i) => _messages[i],
               reverse: true,
             )),
 
