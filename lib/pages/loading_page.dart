@@ -17,7 +17,8 @@ class LoadingPage extends StatelessWidget {
           return Center(
             //child: Text('Espere...'),
             child: Container(
-                child: Image(image: NetworkImage('assets/shilaC.png'))),
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Image(image: AssetImage('assets/shilaLetr.png'))),
           );
         },
       ),
@@ -36,13 +37,13 @@ class LoadingPage extends StatelessWidget {
           context,
           PageRouteBuilder(
               pageBuilder: (_, __, ___) => UsuariosPage(),
-              transitionDuration: Duration(milliseconds: 0)));
+              transitionDuration: Duration(milliseconds: 60)));
     } else {
       Navigator.pushReplacement(
           context,
           PageRouteBuilder(
               pageBuilder: (_, __, ___) => LoginPage(),
-              transitionDuration: Duration(milliseconds: 0)));
+              transitionDuration: Duration(milliseconds: 60)));
     }
   }
 }

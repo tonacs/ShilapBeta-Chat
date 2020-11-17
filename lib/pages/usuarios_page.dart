@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -81,8 +83,12 @@ class _UsuariosPageState extends State<UsuariosPage> {
       title: Text(usuario.nombre),
       subtitle: Text(usuario.email),
       leading: CircleAvatar(
-        child: Text(usuario.nombre.substring(0, 2)),
-        backgroundColor: Colors.blue[100],
+        child: Text(
+          usuario.nombre.substring(0, 2),
+          style: TextStyle(color: Colors.black45),
+        ),
+        // backgroundColor: Colors.blue[100],
+        backgroundColor: usuario.online ? Colors.green[300] : Colors.red[100],
       ),
       trailing: Container(
         width: 10,

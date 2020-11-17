@@ -78,18 +78,18 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.green[300],
         title: Column(
           children: <Widget>[
-            CircleAvatar(
-              child: Text(usuarioPara.nombre.substring(0, 2),
-                  style: TextStyle(fontSize: 12)),
-              backgroundColor: Colors.blue[100],
-              maxRadius: 14,
-            ),
+            // CircleAvatar(
+            //   child: Text(usuarioPara.nombre.substring(0, 2),
+            //       style: TextStyle(fontSize: 12)),
+            //   backgroundColor: Colors.blue[100],
+            //   maxRadius: 14,
+            // ),
             SizedBox(height: 3),
             Text(usuarioPara.nombre,
-                style: TextStyle(color: Colors.black87, fontSize: 12))
+                style: TextStyle(color: Colors.white, fontSize: 18))
           ],
         ),
         centerTitle: true,
@@ -155,7 +155,7 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
                 : Container(
                     margin: EdgeInsets.symmetric(horizontal: 4.0),
                     child: IconTheme(
-                      data: IconThemeData(color: Colors.blue[400]),
+                      data: IconThemeData(color: Colors.green[300]),
                       child: IconButton(
                         highlightColor: Colors.transparent,
                         splashColor: Colors.transparent,
